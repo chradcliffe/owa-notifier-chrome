@@ -1,0 +1,8 @@
+owa-notifier-chrome
+===================
+
+This is a Chrome extension. Look at the Chrome developers' site for
+installation instructions.
+
+There is currently a single config option, URL, which is the address
+of the inbox of the OWA instance.
