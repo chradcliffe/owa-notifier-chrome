@@ -41,7 +41,6 @@ function checkMail() {
                     'You have ' + size(newSet) + ' new message(s)');
             notification.onclose = function() {
                 setCheckAlarm();
-                localStorage["message_set"] = JSON.stringify(newSet);
             };
             notification.show();
             // TODO: fix this, it's not working for some reason
@@ -51,6 +50,8 @@ function checkMail() {
             //     }
             // });
         }
+        // TODO: Handle case where Chrome is closed before the notification is cleared
+        localStorage["message_set"] = JSON.stringify(newSet);
     });
 }
 
